@@ -1,8 +1,8 @@
 var nativefier = require('nativefier').default;
 
 var options = {
-  name: 'Stishit',
-  targetUrl: "https://stishit.net/social-portal",
+  name: 'Instagram',
+  targetUrl: "https://instagram.com",
   counter: true,
   bounce: true,
   width: 500,
@@ -20,12 +20,12 @@ var options = {
   fullScreen: false,
   maximize: false,
   zoom: 1,
-  internalUrls: '.*?\.stishit\.*?|.*?\.google\.*?',
+  internalUrls: '.*?\.instagram\.*?',
   singleInstance: true,
   win32metadata: {
-    ProductName: 'Stishit',
-    InternalName: 'Stishit',
-    FileDescription: 'Stishit'
+    ProductName: 'Instagram',
+    InternalName: 'Instagram',
+    FileDescription: 'Instagram'
   },
   fileDownloadOptions: {
     saveAs: true
