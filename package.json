@@ -1,0 +1,14 @@
+{
+  "name": "Stishit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:etaletai13/Stishit",
+  "author": "Travis CI <travis@travis-ci.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "nativefier": "^7.6.4"
+  },
+  "scripts": {
+    "postinstall": "node ./index.js"
+  }
+}
