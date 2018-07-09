@@ -6,9 +6,15 @@
   "author": "Travis CI <travis@travis-ci.org>",
   "license": "MIT",
   "devDependencies": {
+    "create-dmg": "^3.1.0",
     "nativefier": "^7.6.4"
   },
   "scripts": {
-    "postinstall": "node ./index.js"
+    "postinstall": "yarn build.linux && yarn build.mac && yarn build.win32",
+    "build.linux": "cp src/index.js index.js && sed -e s/PLATFORM/linux/g -i index.js && node index.js",
+    "build.mac": "cp src/index.js index.js && sed -e s/PLATFORM/mac/g -i index.js && node index.js",
+    "build.win32": "cp src/index.js index.js && sed -e s/PLATFORM/win32/g -i index.js && node index.js",
+    "prepare": "yarn package.mac",
+    "package.mac": "mkdir -p Build/Releases && yarn create-dmg --overwrite 'Instagram-darwin-x64/Instagram.app' Build/Releases"
   }
 }

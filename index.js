@@ -2,6 +2,7 @@ var nativefier = require('nativefier').default;
 
 var options = {
   name: 'Instagram',
+  platform: 'win32',
   targetUrl: "https://instagram.com",
   counter: true,
   bounce: true,
